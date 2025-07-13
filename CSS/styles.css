@@ -111,20 +111,31 @@ button:hover {
 
 .header-content {
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo {
-  height: 40px;
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre logo y texto */
 }
 
-.nav span {
+.logo {
+  height: 40px;
+  width: auto; /* Mantiene proporciones */
+}
+
+.logo-text {
   font-size: 18px;
   font-weight: bold;
   color: #005590;
+}
+
+.nav {
+  /* Estilos para la navegación si es necesario */
 }
 
 /* Responsivo */
