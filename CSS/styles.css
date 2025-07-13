@@ -1,0 +1,156 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #4690f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.form-container {
+  max-width: 700px;
+  margin: 40px auto;
+  /*background: #fff;*/
+  background: #bbd9f8;
+  padding: 30px;
+  border-radius: 8px;
+  /*box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);*/
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+h1 {
+  color: #005590; /* Azul ServiceOne */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 15px;
+  box-shadow: 10px 10px 5px 0px rgb(138,128,128);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button {
+  background-color: #005590;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 10px 10px 5px 0px rgba(138,128,128,0.75);
+}
+
+button:hover {
+  background-color: #4ea8ed;
+}
+
+#mensajeEnviado {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsivo */
+@media screen and (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+.header {
+  background-color: #3a3a3c;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #005590;
+}
+
+/* Responsivo */
+@media screen and (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav span {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+}
+
+.footer {
+  background-color: #003f70; /* azul oscuro */
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: auto;
+}
+

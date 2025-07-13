@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Checklist Retiro</title>
+  <link rel="stylesheet" href="./CSS/styles.css"/>
+  <link rel="shortcut icon" type="image/x-icon" href="https://serviceone.cl/img/favicon.ico?1735588697" />
+</head>
+<body>
+    <header class="header">
+    <div class="header-content">
+        <a href="https://www.serviceone.cl" target="_blank" title="ServiceOne SPA">
+        <img src="./img/tienda-logo-1678508457.jpg" alt="ServiceOne SPA" class="logo" />
+        </a>
+        <span class="logo-text">ServiceOne SPA</span>
+        <nav class="nav">
+        <span>Checklist de Retiro</span>
+        </nav>
+    </div>
+    </header>
+
+
+  <div class="form-container">
+    <h1>Formulario de Checklist de Retiro</h1>
+    <form id="retiroForm">
+      <label>Nombre de la Empresa</label>
+      <input type="text" name="00. empresa" required placeholder="Ingrese el nombre de la empresa" />
+
+      <label>Quién Solicita</label>
+      <input type="text" name="01. quien_solicita" required placeholder="Ingrese el nombre de quién solicita" />
+    
+
+      <label>Dirección</label>
+      <input type="text" name="02. direccion" required placeholder="Ingrese la dirección" />
+
+      <label>Nombre del Contacto</label>
+      <input type="text" name="03. contacto" required placeholder = "Ingrese el contacto"/>
+
+      <label>Correo</label>
+      <input type="email" name="04. correo" required placeholder="Ingrese el correo del contacto"/>
+
+      <label>Teléfono</label>
+      <!--<input type="tel" name="05. telefono" required placeholder="Número telefónico del contacto"/>-->
+      <input type="number" name="05. telefono" placeholder="Número telefónico"/>
+
+      <label>Fecha de Retiro</label>
+      <input type="date" name="06. fecha_retiro" required placeholder="Fecha del retiro" />
+
+      <label>Horario de Retiro</label>
+      <input type="text" name="07. horario_retiro" required placeholder="Rango horario para el retiro" />
+
+      <label>Qué se debe retirar</label>
+      <select name="08. qué_retiro" required>
+        <option value="">Seleccione</option>
+        <option>Máquina</option>
+        <option>Insumos</option>
+      </select>
+
+      <!-- <label>Cantidad a retirar</label>
+      <input type="number" name="7. cantidad" required />
+        -->
+        <label>Cantidad a retirar</label>
+      <select name="09. cantidad" required>
+        <option value="">Seleccione</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>más de 5</option>
+      </select>
+
+      <label>Modelos-Series</label>
+      <textarea name="10. modelos_series" required placeholder="Modelo / Series"></textarea>
+
+      <label>¿Tienen accesorios?</label>
+      <!--<input type="text" name="9. accesorios" />-->
+      <select name="11. accesorios" required>
+        <option value="">Seleccione</option>
+        <option>Sí</option>
+        <option>No</option>
+      </select>
+
+      <label>Estado</label>
+      <select name="12. estado" required>
+        <option value="">Seleccione</option>
+        <option>Operativo</option>
+        <option>Defectuoso</option>
+        <option>Desconocido</option>
+      </select>
+
+      <label>¿Están embalados?</label>
+      <select name="13. embalado" required>
+        <option value="">Seleccione</option>
+        <option>Sí</option>
+        <option>No</option>
+      </select>
+
+      <label>¿Requieren mantención?</label>
+      <select name="14. mantencion" required>
+        <option value="">Seleccione</option>
+        <option>No</option>
+        <option>Sí</option>
+      </select>
+
+      <label>Destino de la impresora</label>
+      <select name="15. destino" required>
+        <option value="">Seleccione</option>
+        <option>Scrap</option>
+        <option>Bodega servicio</option>
+        <option>Bodega almacen</option>
+      </select>
+
+      <label>Observaciones</label>
+      <textarea name="16. Observaciones"></textarea>
+
+      <button type="submit">Enviar</button>
+      <p id="mensajeEnviado" class="hidden">✔ Formulario enviado correctamente</p>
+    </form>
+  </div>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+
+    <script src="./JS/main.js"></script>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <p>&copy; <span id="year"></span> ServiceOne SPA. Todos los derechos reservados.</p>
+    </div>
+    </footer>
+
+
+<!--<script src="https://cdn.emailjs.com/dist/email.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("3rtdVYTxT07AcNSQW"); // Reemplaza con tu verdadero User ID de EmailJS
+</script>
+
+</body>
+</html>
